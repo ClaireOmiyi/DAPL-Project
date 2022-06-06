@@ -246,9 +246,13 @@ import statsmodels.api as sm
 model = sm.OLS(y_train, X_train).fit()
 model.summary()
 
+#Predict
+predictions= model.predict(X_test)
+
 #Accuracy
 mse = mean_squared_error(y_test,predictions)
 print(mse)
+
 
 #Continuation of Model 1 - Deep Neural Network
 
